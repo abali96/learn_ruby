@@ -1,4 +1,4 @@
-# You should be in the folder 00_hello on the command line, 
+ # You should be in the folder 00_hello on the command line, 
 # you should have already entered 
 # $ gem install rspec
 # and you should be running this problem's tests by entering
