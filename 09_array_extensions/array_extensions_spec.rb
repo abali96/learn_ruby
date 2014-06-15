@@ -1,6 +1,11 @@
 require "array_extensions" # we don't call it "array.rb" since that would be confusing
 
+
+
 describe Array do
+  before(:each) do
+    @array=Array.new
+  end
 
   describe "#sum" do
     # it "has a #sum method" do
