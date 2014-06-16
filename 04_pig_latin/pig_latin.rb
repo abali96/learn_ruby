@@ -1,20 +1,24 @@
 def translate(string)
 	vowels = %w(a e i o u)
-	counter = 0
 	@output = []
-	to_be_added = ""
 	words = string.split(' ')
 		words.each do |word|
-		word.each_char do |x|
-			if vowels.include?(x)
-				break
-			else
-				to_be_added << x
-				counter += 1
+				to_be_added = ""
+				counter = 0
+			word.each_char do |x|
+				if x == "u" and word.index("q") == word.index("u")-1
+					to_be_added << "u"
+					counter += 1
+					break
+				elsif vowels.include?(x)
+					break
+				else
+					to_be_added << x
+					counter += 1
+				end
 			end
-		end
-		@new_str = word + to_be_added + "ay"
-		@output << @new_str[counter..-1]
+		new_str = word + to_be_added + "ay"
+		@output << new_str[counter..-1]
 		end
 	@output.join(' ')
 end
