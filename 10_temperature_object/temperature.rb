@@ -50,11 +50,10 @@ end
 
 class Fahrenheit < Temperature
 	def initialize(f)
-		@f =f
+		@f = f
 	end
 
 	def to_celsius
 		(@f-32)*(5.0/9)
 	end
-
 end
